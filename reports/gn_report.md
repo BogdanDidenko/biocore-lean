@@ -303,10 +303,10 @@ For the records rejected as `notWholeCodons`, the file `StopCompletion.lean` sta
 - [gn_choices.sha256](../docs/genes/gn_choices.sha256): its hash
 - [gn_choices_amendment_1.md](../docs/genes/gn_choices_amendment_1.md): method rule outcome and engineering decisions, before the bulk run
 - [gn_choices_amendment_2.md](../docs/genes/gn_choices_amendment_2.md): before the main sessions
-- gn_results.parquet: release archive `biocore_gene_records_v0_1.tar.gz` (see the README): one row per record
+- gn_results.parquet: `releases/biocore_gene_records_v0_1.tar.gz` (see the README): one row per record
 - [gn_summary.csv](../results/gn_summary.csv): level-X counts per group, class, reason and annotation category
 - [gn_summary_level_K.csv](../results/gn_summary_level_K.csv): level-K counts and seconds per group, class, status and method
-- gn_library.tgz: this repository plus the release archive of record files (see the README): the Lean files and tools
+- gn_library.tgz: this repository plus `releases/biocore_gene_records_v0_1.tar.gz` (see the README): the Lean files and tools
 - [gn_axioms_audit.json](../results/gn_axioms_audit.json): axioms per theorem, the sample, the hand-written theorems, the union
 - gn_logs.tgz (not in this repository): session logs, build logs, lake logs, timing files, negative controls
 - gn_s1_raw_outputs.tar (not in this repository): raw outputs of session s1

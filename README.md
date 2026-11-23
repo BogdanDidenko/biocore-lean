@@ -78,7 +78,7 @@ Put the Lean 4.36.0 `bin` directory on `PATH`.
     lake build +BioCore.Library.Reactions.All     # reaction library, about 23 minutes on 4 virtual CPUs
     lake -f lakefile_gn.toml build +BioCore.Library.Genes.Chain +BioCore.Library.Genes.StopCompletion
 
-The 19,380 generated gene record modules (325 MB of Lean text) are not in the git tree. They are distributed as the archive `biocore_gene_records_v0_1.tar.gz` on the Releases page of this repository, together with the full results table including sequences; its sha256 is in `docs/genes/RECORDS_ARCHIVE_SHA256.txt`. If no release is listed, the archive has not been uploaded yet. Unpack it over this tree, then:
+The 19,380 generated gene record modules (325 MB of Lean text) are not in the git tree. They are in the archive `releases/biocore_gene_records_v0_1.tar.gz` in this repository (54.7 MB), together with the full results table including sequences; its sha256 is in `docs/genes/RECORDS_ARCHIVE_SHA256.txt`. Unpack it over this tree (`tar -xzf releases/biocore_gene_records_v0_1.tar.gz`), then:
 
     lake -f lakefile_gn.toml build BioCoreLibraryGenes     # hours; see reports/gn_report.md
 

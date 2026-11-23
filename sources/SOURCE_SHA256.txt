@@ -1,0 +1,3 @@
+431f2724c75e11d5fc8241c8297fb3b68613be262c5c094a3f4175523046b260  data_src/chebi_chemical_data.tsv.gz
+66d9a9a66279e00d1f8ed001664d0efc366208d873b3693e564bd682af055893  data_src/chebi_compounds.tsv.gz
+2aecbdd09ecc5e0d233c105090a593737298ef93d88f6bc0c1bef26df6051a04  data_src/gc.prt

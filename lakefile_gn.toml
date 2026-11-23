@@ -1,0 +1,17 @@
+# Copy of the frozen lakefile.toml with targets ADDED for the gene library (track gn).
+# Use: lake -f lakefile_gn.toml build <target>. The frozen lakefile.toml is not edited.
+# weakLeanArgs only enlarges the thread stack of the Lean process (long sequences recurse deeply);
+# it does not change what is checked.
+name = "biocore"
+defaultTargets = ["BioCore"]
+weakLeanArgs = ["-s", "8000000"]
+
+[[lean_lib]]
+name = "BioCore"
+
+[[lean_lib]]
+name = "BioCoreLibraryGenes"
+
+[[lean_exe]]
+name = "gn_decode"
+root = "BioCore.Library.Genes.DecodeMain"

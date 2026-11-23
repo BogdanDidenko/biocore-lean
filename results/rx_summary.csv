@@ -1,0 +1,18 @@
+rule_set,class,reason_code,level,count
+final (rx_choices.md + amendment 1),PROVED_BALANCED,(all),K,18595
+final (rx_choices.md + amendment 1),PROVED_UNBALANCED,(all),K,6
+final (rx_choices.md + amendment 1),NOT_EXPRESSIBLE,(all),,404
+final (rx_choices.md + amendment 1),NOT_EXPRESSIBLE,polymer_participant,,289
+final (rx_choices.md + amendment 1),NOT_EXPRESSIBLE,symbolic_coefficient,,77
+final (rx_choices.md + amendment 1),NOT_EXPRESSIBLE,chebi_no_formula,,33
+final (rx_choices.md + amendment 1),NOT_EXPRESSIBLE,chebi_id_absent,,5
+final (rx_choices.md + amendment 1),(scope),(all),,19005
+rx_choices.md unamended,PROVED_BALANCED,(all),K,18119
+rx_choices.md unamended,PROVED_UNBALANCED,(all),K,5
+rx_choices.md unamended,NOT_EXPRESSIBLE,(all),,881
+rx_choices.md unamended,NOT_EXPRESSIBLE,formula_unknown_token,,477
+rx_choices.md unamended,NOT_EXPRESSIBLE,polymer_participant,,289
+rx_choices.md unamended,NOT_EXPRESSIBLE,symbolic_coefficient,,77
+rx_choices.md unamended,NOT_EXPRESSIBLE,chebi_no_formula,,33
+rx_choices.md unamended,NOT_EXPRESSIBLE,chebi_id_absent,,5
+rx_choices.md unamended,(scope),(all),,19005

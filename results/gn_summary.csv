@@ -1,0 +1,17 @@
+level,group,class,reason,annotation_explanation,n
+X,MITO,ACCEPTED_EQUAL,,none_given,7
+X,MITO,REJECTED,notWholeCodons,incomplete_stop_codon,6
+X,PLUS_CLINICAL,ACCEPTED_EQUAL,,RNA_editing,2
+X,PLUS_CLINICAL,ACCEPTED_EQUAL,,none_given,72
+X,SELECT,ACCEPTED_EQUAL,,RNA_editing,24
+X,SELECT,ACCEPTED_EQUAL,,non_AUG_start,26
+X,SELECT,ACCEPTED_EQUAL,,non_AUG_start; RNA_editing,1
+X,SELECT,ACCEPTED_EQUAL,,none_given,19206
+X,SELECT,ACCEPTED_EQUAL,,ribosomal_slippage,1
+X,SELECT,NOT_EXPRESSIBLE,CDS_FEATURE_COUNT_0,none_given,70
+X,SELECT,REJECTED,badStart,other_transl_except; non_AUG_start,5
+X,SELECT,REJECTED,badStart,other_transl_except; non_AUG_start; other,4
+X,SELECT,REJECTED,internalStop,selenocysteine,23
+X,SELECT,REJECTED,internalStop,selenocysteine; non_AUG_start,1
+X,SELECT,REJECTED,internalStop,selenocysteine; stop_codon_readthrough,1
+X,SELECT,REJECTED,notWholeCodons,incomplete_stop_codon,1

@@ -1,0 +1,5 @@
+name = "biocore"
+defaultTargets = ["BioCore"]
+
+[[lean_lib]]
+name = "BioCore"

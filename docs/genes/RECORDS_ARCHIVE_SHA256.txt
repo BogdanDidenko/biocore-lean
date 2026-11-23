@@ -1,0 +1,2 @@
+77f5402d4b6d5685b11f979766c39302cc85942b19e1d8067a900c1a84a67efd  biocore_gene_records_v0_1.tar.gz
+# 19380 record modules under BioCore/Library/Genes/Rec/ (325093851 bytes of Lean text) and results/gn_results.parquet; 54681198 bytes compressed

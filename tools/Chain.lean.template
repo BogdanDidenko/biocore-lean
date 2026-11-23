@@ -1,0 +1,91 @@
+import BioCore
+/-!
+# BioCore.Library.Genes.Chain  (hand-written; level K)
+
+Three human genes of different lengths, each followed from DNA to protein inside the kernel:
+
+1. the coding strand of the MANE Select transcript (the annotated CDS stretch, as DNA);
+2. its transcription, `transcribe codingStrand = rna`;
+3. the reading of the RNA, `decodeCDS standardCode rna = .ok protein`,
+   where `protein` is the `/translation` of the RefSeq record;
+4. `Balanced (transcriptionRxn rna)`: making this RNA from nucleoside triphosphates creates and
+   destroys no atom and no charge;
+5. `Balanced (peptideRxn protein)`: condensing the amino acids into this protein does the same.
+
+Statements 2 and 3 are checked by evaluation in the kernel (`decide +kernel`). Statements 4 and 5 are
+instances of the general theorems `transcription_balanced` and `peptide_balanced`; nothing is computed
+per gene for them.
+
+The genes were named in `gn_choices.md` before any data was read: INS, TP53, BRCA1.
+The three sequence literals of each gene are pasted by `tools/gn_fill_chain.py` from the parsed flat
+file (MANE release @MANE_VERSION@); the statements and proofs below are written by hand.
+
+What this does not say: the RNA here is the coding region only (no untranslated regions, no introns:
+the kernel has no splicing), and peptide synthesis is the net condensation (no tRNA, ATP or GTP).
+-/
+set_option maxRecDepth 100000000
+set_option maxHeartbeats 0
+namespace BioCore.Genes.Chain
+open BioCore
+
+/-! ## INS, insulin: @INS_ID@, CDS @INS_LOC@ of the mRNA record, @INS_NT@ bases, @INS_AA@ residues -/
+
+noncomputable def INS.codingStrand : List DNt := @INS_DNA@
+noncomputable def INS.rna : List RNt := @INS_RNA@
+noncomputable def INS.protein : List AA := @INS_PROT@
+
+theorem INS.transcription : transcribe INS.codingStrand = INS.rna := by decide +kernel
+theorem INS.decoding : decodeCDS standardCode INS.rna = .ok INS.protein := by decide +kernel
+theorem INS.rna_balanced : Balanced (transcriptionRxn INS.rna) := BioCore.transcription_balanced INS.rna
+theorem INS.protein_balanced : Balanced (peptideRxn INS.protein) := BioCore.peptide_balanced INS.protein
+
+/-- The whole chain for INS in one statement. -/
+theorem INS.chain :
+    decodeCDS standardCode (transcribe INS.codingStrand) = .ok INS.protein
+      ∧ Balanced (transcriptionRxn (transcribe INS.codingStrand))
+      ∧ Balanced (peptideRxn INS.protein) := by
+  rw [INS.transcription]
+  exact ⟨INS.decoding, INS.rna_balanced, INS.protein_balanced⟩
+
+/-! ## TP53, tumor protein p53: @TP53_ID@, CDS @TP53_LOC@, @TP53_NT@ bases, @TP53_AA@ residues -/
+
+noncomputable def TP53.codingStrand : List DNt := @TP53_DNA@
+noncomputable def TP53.rna : List RNt := @TP53_RNA@
+noncomputable def TP53.protein : List AA := @TP53_PROT@
+
+theorem TP53.transcription : transcribe TP53.codingStrand = TP53.rna := by decide +kernel
+theorem TP53.decoding : decodeCDS standardCode TP53.rna = .ok TP53.protein := by decide +kernel
+theorem TP53.rna_balanced : Balanced (transcriptionRxn TP53.rna) := BioCore.transcription_balanced TP53.rna
+theorem TP53.protein_balanced : Balanced (peptideRxn TP53.protein) := BioCore.peptide_balanced TP53.protein
+
+/-- The whole chain for TP53 in one statement. -/
+theorem TP53.chain :
+    decodeCDS standardCode (transcribe TP53.codingStrand) = .ok TP53.protein
+      ∧ Balanced (transcriptionRxn (transcribe TP53.codingStrand))
+      ∧ Balanced (peptideRxn TP53.protein) := by
+  rw [TP53.transcription]
+  exact ⟨TP53.decoding, TP53.rna_balanced, TP53.protein_balanced⟩
+
+/-! ## BRCA1, BRCA1 DNA repair associated: @BRCA1_ID@, CDS @BRCA1_LOC@, @BRCA1_NT@ bases, @BRCA1_AA@ residues -/
+
+noncomputable def BRCA1.codingStrand : List DNt := @BRCA1_DNA@
+noncomputable def BRCA1.rna : List RNt := @BRCA1_RNA@
+noncomputable def BRCA1.protein : List AA := @BRCA1_PROT@
+
+theorem BRCA1.transcription : transcribe BRCA1.codingStrand = BRCA1.rna := by decide +kernel
+theorem BRCA1.decoding : decodeCDS standardCode BRCA1.rna = .ok BRCA1.protein := by decide +kernel
+theorem BRCA1.rna_balanced : Balanced (transcriptionRxn BRCA1.rna) := BioCore.transcription_balanced BRCA1.rna
+theorem BRCA1.protein_balanced : Balanced (peptideRxn BRCA1.protein) := BioCore.peptide_balanced BRCA1.protein
+
+/-- The whole chain for BRCA1 in one statement. -/
+theorem BRCA1.chain :
+    decodeCDS standardCode (transcribe BRCA1.codingStrand) = .ok BRCA1.protein
+      ∧ Balanced (transcriptionRxn (transcribe BRCA1.codingStrand))
+      ∧ Balanced (peptideRxn BRCA1.protein) := by
+  rw [BRCA1.transcription]
+  exact ⟨BRCA1.decoding, BRCA1.rna_balanced, BRCA1.protein_balanced⟩
+
+/-- A negative control: the INS coding strand does not decode to the TP53 protein. -/
+theorem INS.not_TP53 : decodeCDS standardCode (transcribe INS.codingStrand) ≠ .ok TP53.protein := by decide +kernel
+
+end BioCore.Genes.Chain

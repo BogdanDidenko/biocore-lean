@@ -1,0 +1,9 @@
+# species that ChEBI release 257 does not hold as a residue; formula by the rule (dg_choices.md section 3)
+ident	rule	chebi	display
+r1_747433	R1	CHEBI:747433	S-(4-hydroxynonanal-3-yl)-L-cysteine residue
+r1x2_50609	R1x2	CHEBI:50609	LL-dityrosine crosslink of two residues
+r1x2_59951	R1x2	CHEBI:59951	pentosidine crosslink of two residues
+r1_178071	R1	CHEBI:178071	N-(1-deoxy-D-fructos-1-yl)-L-valine N-terminal residue
+r1_49054	R1	CHEBI:49054	N-carbamoyl-L-valine N-terminal residue
+r3_29958	R3	CHEBI:29958	L-aspartyl succinimide residue
+r2_63224	R2	CHEBI:63224	8-oxo-2'-deoxyguanosine 5'-monophosphate(1-) residue

@@ -1,0 +1,103 @@
+# ChEBI release 257 species used by the hand-written files (beyond those of the Rhea records in scope)
+chebi	note
+CHEBI:15377	water
+CHEBI:15378	hydron
+CHEBI:16234	hydroxide
+CHEBI:16240	hydrogen peroxide
+CHEBI:15379	dioxygen
+CHEBI:28938	ammonium
+CHEBI:16134	ammonia
+CHEBI:16044	L-methionine residue
+CHEBI:15989	L-methionine S-oxide residue
+CHEBI:44120	L-methionine (S)-S-oxide residue
+CHEBI:45764	L-methionine (R)-S-oxide residue
+CHEBI:156065	L-methionine sulfone residue
+CHEBI:29950	L-cysteine residue
+CHEBI:50058	L-cystine residue
+CHEBI:61973	S-hydroxy-L-cysteine residue
+CHEBI:61974	3-sulfino-L-alanine(1-) residue
+CHEBI:61967	3-sulfino-L-alanine residue
+CHEBI:141830	L-cysteate residue
+CHEBI:50347	L-asparagine residue
+CHEBI:29961	L-aspartate residue
+CHEBI:29958	L-aspartic acid residue
+CHEBI:29962	D-aspartate residue
+CHEBI:48094	D-aspartic acid residue
+CHEBI:90596	L-beta-isoaspartate residue
+CHEBI:90598	L-isoaspartate alpha-methyl ester residue
+CHEBI:17790	methanol
+CHEBI:59789	S-adenosyl-L-methionine zwitterion
+CHEBI:57856	S-adenosyl-L-homocysteine zwitterion
+CHEBI:29969	L-lysinium residue
+CHEBI:29967	L-lysine residue
+CHEBI:29965	L-argininium residue
+CHEBI:50342	L-proline residue
+CHEBI:30015	L-valine residue
+CHEBI:46858	L-tyrosine residue
+CHEBI:42758	aldehydo-D-glucose
+CHEBI:143253	N(6)-(D-fructosyl)-L-lysinium residue
+CHEBI:143254	N(6)-(3-O-phospho-D-fructosyl)-L-lysinium(1-) residue
+CHEBI:60777	3-deoxyglucosone
+CHEBI:34779	glyoxal
+CHEBI:53015	N(6)-carboxymethyl-L-lysine residue
+CHEBI:53014	N(6)-carboxymethyl-L-lysine
+CHEBI:136591	D-erythronate
+CHEBI:47014	aldehydo-D-ribose
+CHEBI:29202	isocyanic acid
+CHEBI:29195	cyanate
+CHEBI:16199	urea
+CHEBI:144369	L-homocitrulline residue
+CHEBI:17443	L-homocitrulline
+CHEBI:33101	nitrogen dioxide
+CHEBI:16301	nitrite
+CHEBI:16480	nitric oxide
+CHEBI:18421	superoxide
+CHEBI:25941	peroxynitrite
+CHEBI:25942	peroxynitrous acid
+CHEBI:29191	hydroxyl
+CHEBI:155899	3-nitro-L-tyrosine residue
+CHEBI:44454	3-nitro-L-tyrosine
+CHEBI:32766	L-tyrosinyl radical residue
+CHEBI:131803	L-allysine residue
+CHEBI:41433	L-glutamic 5-semialdehyde residue
+CHEBI:30087	guanidinium
+CHEBI:58968	(E)-4-hydroxynon-2-enal
+CHEBI:85452	2'-deoxycytidine 5'-monophosphate(1-) residue
+CHEBI:133902	dUMP residue(1-)
+CHEBI:85454	5-methyl dCMP(1-) residue
+CHEBI:137386	thymidine 5'-monophosphate(1-) residue
+CHEBI:90615	2'-deoxyadenosine 5'-monophosphate(1-) residue
+CHEBI:85445	2'-deoxyguanosine 5'-monophosphate(1-) residue
+CHEBI:139095	2'-deoxyribose 5'-monophosphate(1-) residue
+CHEBI:16708	adenine
+CHEBI:16235	guanine
+CHEBI:17568	uracil
+CHEBI:52617	7,8-dihydro-8-oxoguanine
+CHEBI:44605	8-oxoguanine
+CHEBI:57673	2'-deoxyguanosine 5'-monophosphate(2-)
+CHEBI:63224	8-oxo-dGMP(2-)
+CHEBI:246422	dUMP(2-)
+CHEBI:57566	2'-deoxycytosine 5'-monophosphate(2-)
+CHEBI:65263	cyclobutadithymidine(2-) residue
+CHEBI:139519	thymidine dimer(2-) residue
+CHEBI:145571	thymidine(6-4)thymidine(2-) residue
+CHEBI:62877	2-deoxy-D-ribofuranose 5-phosphate(2-)
+CHEBI:61481	dCTP(4-)
+CHEBI:61429	dGTP(4-)
+CHEBI:33019	diphosphate(3-)
+CHEBI:30616	ATP(4-)
+CHEBI:456216	ADP(3-)
+CHEBI:456215	adenosine 5'-monophosphate(2-)
+CHEBI:43474	hydrogenphosphate
+CHEBI:57783	NADPH(4-)
+CHEBI:58349	NADP(3-)
+CHEBI:57925	glutathionate(1-)
+CHEBI:58297	glutathione disulfide(2-)
+CHEBI:17158	methylglyoxal
+CHEBI:57474	(R)-S-lactoylglutathionate(1-)
+CHEBI:761070	S-lactoylglutathione hemithioacetal(1-)
+CHEBI:16004	(R)-lactate
+CHEBI:35235	L-cysteine zwitterion
+CHEBI:58315	L-tyrosine zwitterion
+CHEBI:30011	L-glutamine residue
+CHEBI:29973	L-glutamate residue

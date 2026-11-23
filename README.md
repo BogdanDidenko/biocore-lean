@@ -4,6 +4,14 @@ Kernel-checked bookkeeping for molecular biology in Lean 4 (release 4.36.0, no M
 
 A statement here is either derived from stated assumptions and accepted by the Lean kernel, or it is not in the library. The price is scope: the core covers element and charge balance of reactions and the reading of the genetic code, and nothing about what happens in a cell.
 
+## Status (2026-11-23)
+
+- **Kernel 0.2: complete.** One file added to kernel 0.1, `BioCore/Firing.lean`: a firing rule that requires every molecule on the left side of a reaction (so an enzyme written on both sides must be present), and states compared by content. No kernel 0.1 file is edited. See `docs/kernel_0_2.md`; hashes in `KERNEL_0_2_SHA256.txt`.
+- **Site core: complete** (`BioCore/Library/Sites/Base.lean`, `Data.lean`, `SiteProtein.lean`): a protein as a sequence plus site states with a derived formula, and the theorem that a one-site modification is balanced on the protein exactly when it is balanced on the residue.
+- **Named-site library: partial, work in progress.** Present: `Sites/Marks.lean` (chain ends and bridges as site states, a general theorem per kind of change) and `Sites/Enzymes.lean` (writers and erasers under the strict firing rule; nothing is reachable from a state where no reaction can fire). Not done: residue lemmas generated from Rhea, human Swiss-Prot sites checked against their sequences, worked examples, the composition tool.
+- **Damage and repair library: partial, work in progress.** Present: 894 Rhea records of the damage and repair classes proved balanced (`Damage/Rx01`–`Rx03`, `RxAll`); spontaneous damage reactions that Rhea does not hold, each with a refused false variant and the source for the claim that it occurs without an enzyme, which stays an assumption (`Damage/Spontaneous.lean`); general theorems on what a reaction library can and cannot undo (`Damage/General.lean`); a test of the rule for deriving residue formulas against ChEBI (`Damage/RuleTest.lean`); the choices file `docs/damage/dg_choices.md`. Not done: repair cycles with their net cost, the per-product classification "route back exists / no route back", worked examples on named proteins, time scales attached as data.
+- All modules listed above build on kernel 0.2. Their 1,498 theorems depend only on `propext`, `Quot.sound` and `Classical.choice` (13 on none); there is no `sorry` and no `native_decide`. No module was left out. The partial libraries were not reviewed beyond this build and axioms check.
+
 ## What is in it
 
 | Part | Content | Size |
